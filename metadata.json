@@ -1,0 +1,6 @@
+{
+  "name": "Desafio Barriga Zero",
+  "description": "Página de vendas e aplicativo interativo do Desafio Barriga Zero, criado pela Nutricionista Andréia Vaz.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
