@@ -244,40 +244,6 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
             </div>
           </div>
 
-          {/* WhatsApp Conversation Showcase with Blurred Contact Header */}
-          <div className="pt-4 max-w-sm mx-auto">
-            <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-gray-100 bg-white">
-              <img 
-                src="https://andreiavaz846109688.wordpress.com/wp-content/uploads/2026/07/imagem-do-whatsapp-de-2023-12-20-as-07.14.10_cbc64803.jpg" 
-                alt="Resultado da Aluna no WhatsApp"
-                referrerPolicy="no-referrer"
-                className="w-full h-auto"
-              />
-              {/* Blur overlay to hide student's phone number on the top header */}
-              <div className="absolute top-0 left-0 right-0 h-[11%] bg-[#075e54]/95 backdrop-blur-md flex items-center justify-between px-4 py-2 border-b border-white/10">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full overflow-hidden border border-white/20 shadow-inner shrink-0">
-                    <img 
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" 
-                      alt="Juliana" 
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="text-left">
-                    <p className="text-[10px] md:text-xs font-bold text-white tracking-wide">Juliana - Desafio Barriga Zero</p>
-                    <p className="text-[8px] md:text-[10px] text-emerald-200 font-medium flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p className="text-xs text-gray-500 font-semibold mt-2 text-center italic">
-              *Mensagem real enviada por uma de nossas alunas de 15 dias.
-            </p>
-          </div>
-
           <div className="bg-brand-sage/40 border-2 border-dashed border-brand-green/20 rounded-2xl p-6 max-w-xl mx-auto text-center space-y-4">
             <p className="text-base md:text-lg text-brand-dark-green font-semibold">
               Você simplesmente abre o <strong className="text-brand-pink font-black text-lg">aplicativo</strong>...
@@ -426,7 +392,7 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
                   />
                   
                   {/* WhatsApp top bar cover to rename group and cover phone number */}
-                  <div className="absolute top-0 left-0 right-0 h-[10.5%] bg-[#075e54] flex items-center justify-between px-3 py-1.5 border-b border-white/5 shadow-md">
+                  <div className="absolute top-0 left-0 right-0 h-[10.5%] bg-[#075e54] z-20 flex items-center justify-between px-3 py-1.5 border-b border-white/5 shadow-md">
                     <div className="flex items-center gap-1.5">
                       {/* Back arrow */}
                       <span className="text-white font-bold text-sm">←</span>
@@ -447,16 +413,23 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
                   </div>
 
                   {/* Elegant solid/blur stickers to hide individual cell phone numbers if any */}
-                  {/* We'll cover any phone number text beautifully on the left side of chat message bubbles */}
-                  <div className="absolute top-[16.5%] left-[11%] bg-white border border-gray-100 rounded-md px-1.5 py-0.5 shadow-sm text-[8px] font-black text-brand-pink uppercase tracking-wider flex items-center gap-1">
-                    <span>🌸</span> <span>Aluna Desafio</span>
+                  {/* Covering the first phone number: +55 45 9817-2969 (which is covered by the top bar, but we add a safety block at top-[1.2%] left-[10%] in case header loads offset) */}
+                  <div className="absolute top-[1.2%] left-[10%] w-[42%] h-[3.8%] bg-white rounded-md z-30 flex items-center">
+                    <span className="text-[9px] font-bold text-gray-500 pl-2">★ Aluna Desafio</span>
                   </div>
-                  <div className="absolute top-[37.5%] left-[11%] bg-white border border-gray-100 rounded-md px-1.5 py-0.5 shadow-sm text-[8px] font-black text-brand-pink uppercase tracking-wider flex items-center gap-1">
-                    <span>⭐</span> <span>Aluna Desafio</span>
+                  
+                  {/* Covering the second phone number: +55 45 9817-2969 (precisely at 19.2% height) */}
+                  <div className="absolute top-[19.2%] left-[10%] w-[42%] h-[3.8%] bg-white rounded-md z-30 flex items-center">
+                    <span className="text-[9px] font-bold text-gray-500 pl-2">★ Aluna Desafio</span>
+                  </div>
+
+                  {/* Covering the third phone number: +55 11 94783-0408 (precisely at 88.5% height) */}
+                  <div className="absolute top-[88.5%] left-[10%] w-[42%] h-[3.8%] bg-white rounded-md z-30 flex items-center">
+                    <span className="text-[9px] font-bold text-gray-500 pl-2">★ Aluna Desafio</span>
                   </div>
 
                   {/* Visual Highlight Badge */}
-                  <div className="absolute bottom-3 right-3 bg-brand-pink text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow uppercase tracking-wider">
+                  <div className="absolute bottom-3 right-3 bg-brand-pink text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow uppercase tracking-wider z-[25]">
                     Mensagem Real 📸
                   </div>
                 </div>
@@ -493,7 +466,7 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
                   />
                   
                   {/* WhatsApp top bar cover to make both testimonials perfectly symmetric */}
-                  <div className="absolute top-0 left-0 right-0 h-[10.5%] bg-[#075e54] flex items-center justify-between px-3 py-1.5 border-b border-white/5 shadow-md">
+                  <div className="absolute top-0 left-0 right-0 h-[10.5%] bg-[#075e54] z-20 flex items-center justify-between px-3 py-1.5 border-b border-white/5 shadow-md">
                     <div className="flex items-center gap-1.5">
                       <span className="text-white font-bold text-sm">←</span>
                       <div className="w-7 h-7 rounded-full bg-brand-pink/20 flex items-center justify-center font-bold text-white text-[11px] border border-white/20 shadow-inner">
@@ -826,15 +799,39 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
                 <div className="flex items-center gap-2 border-b border-gray-100 pb-2">
                   <div className="w-8 h-8 rounded-full bg-brand-sage flex items-center justify-center font-bold text-brand-green text-sm">J</div>
                   <div>
-                    <span className="font-bold block text-sm text-brand-dark-green">Juh ~</span>
+                    <span className="font-bold block text-sm text-brand-dark-green">Juliana</span>
                     <span className="text-[10px] text-gray-400">Aluna do desafio</span>
                   </div>
                 </div>
-                <div className="bg-[#efeae2] p-3 rounded-xl space-y-2 shadow-inner">
-                  <div className="bg-[#e2f9cb] p-2.5 rounded-lg max-w-[90%] ml-auto text-left shadow-sm text-xs text-gray-800">
-                    <p className="font-semibold text-emerald-800 text-[10px]">Bom dia amoreee!!</p>
-                    <p className="leading-relaxed">Eu estou muitooo feliz, estou usando uma calça que há muito tempo não usava, pq apertava na minha barriga. Tooo achando isso incrível 😍❤️</p>
-                    <span className="text-[9px] text-gray-500 block text-right mt-1">09:12</span>
+                
+                <div className="relative rounded-xl overflow-hidden border border-gray-200 bg-white group max-h-[160px]">
+                  <img 
+                    src="https://andreiavaz846109688.wordpress.com/wp-content/uploads/2026/07/imagem-do-whatsapp-de-2023-12-20-as-07.14.10_cbc64803.jpg" 
+                    alt="Resultado de Juliana no WhatsApp"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-auto object-cover object-top"
+                  />
+                  {/* WhatsApp top bar cover to rename contact and cover phone number */}
+                  <div className="absolute top-0 left-0 right-0 h-[17%] bg-[#075e54]/95 backdrop-blur-md z-20 flex items-center justify-between px-3 py-1 border-b border-white/10">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-5 h-5 rounded-full overflow-hidden border border-white/20 shadow-inner shrink-0">
+                        <img 
+                          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" 
+                          alt="Juliana" 
+                          referrerPolicy="no-referrer"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-[8px] font-bold text-white tracking-wide">Juliana - Desafio</p>
+                        <p className="text-[6px] text-emerald-200 font-medium flex items-center gap-0.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Online
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-2 right-2 bg-brand-pink text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow">
+                    Mensagem Real 📸
                   </div>
                 </div>
               </div>
@@ -861,6 +858,18 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
                     referrerPolicy="no-referrer"
                     className="w-full h-auto object-cover object-top"
                   />
+                  {/* WhatsApp top bar cover to rename contact and cover phone number */}
+                  <div className="absolute top-0 left-0 right-0 h-[17%] bg-[#075e54]/95 backdrop-blur-md z-20 flex items-center justify-between px-3 py-1 border-b border-white/10">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-5 h-5 rounded-full bg-brand-pink/20 flex items-center justify-center font-bold text-brand-pink text-[9px] border border-white/20 shadow-inner shrink-0 text-white">C</div>
+                      <div className="text-left">
+                        <p className="text-[8px] font-bold text-white tracking-wide">Cleuza - Desafio</p>
+                        <p className="text-[6px] text-emerald-200 font-medium flex items-center gap-0.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Online
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                   <div className="absolute bottom-2 right-2 bg-brand-pink text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow">
                     Mensagem Real 📸
                   </div>
