@@ -71,7 +71,7 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
   };
 
   return (
-    <div className="min-h-screen bg-brand-green text-brand-cream font-sans selection:bg-brand-pink selection:text-white">
+    <div className="min-h-screen bg-[#FAF8F5] text-brand-dark-green font-sans selection:bg-brand-pink selection:text-white">
       {/* Top Scarcity Banner with Countdown */}
       <div className="bg-red-600 text-white py-2.5 px-4 text-center text-xs md:text-sm font-extrabold flex flex-wrap items-center justify-center gap-2 border-b border-white/20 sticky top-0 z-50 shadow-md">
         <Clock className="w-4 h-4 shrink-0 animate-pulse text-white" />
@@ -95,7 +95,7 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
 
           {/* Headline */}
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-3xl mx-auto">
-            Elimine até <span className="text-brand-pink font-black relative inline-block">3 cm de barriga</span> em apenas <span className="text-brand-pink font-black relative inline-block">15 dias</span>.
+            Perca até <span className="text-brand-pink font-black relative inline-block">3 cm de barriga</span> em apenas <span className="text-brand-pink font-black relative inline-block">15 dias</span>.
           </h1>
 
           {/* Subheadline */}
@@ -847,9 +847,9 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
             <div className="bg-[#fcfbf9] rounded-2xl p-5 border border-gray-100 shadow-sm space-y-4 flex flex-col justify-between hover:shadow-md transition-all duration-200">
               <div className="space-y-3">
                 <div className="flex items-center gap-2 border-b border-gray-100 pb-2">
-                  <div className="w-8 h-8 rounded-full bg-brand-pink/15 flex items-center justify-center font-bold text-brand-pink text-sm">M</div>
+                  <div className="w-8 h-8 rounded-full bg-brand-pink/15 flex items-center justify-center font-bold text-brand-pink text-sm">C</div>
                   <div>
-                    <span className="font-bold block text-sm text-brand-dark-green">Dona Maria (Mãe da Nutri)</span>
+                    <span className="font-bold block text-sm text-brand-dark-green">Cleuza (Mãe da Nutri)</span>
                     <span className="text-[10px] text-gray-400">69 anos, aplicando o método</span>
                   </div>
                 </div>
@@ -960,29 +960,26 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
           
           {/* Main Title of Offer */}
           <div className="text-center space-y-2">
-            <span className="text-brand-gold font-extrabold uppercase tracking-widest text-xs md:text-sm">
-              Inscrições Abertas com Desconto
-            </span>
-            <h3 className="font-serif text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
-              Seu <span className="text-brand-gold font-black">Kit Oficial Barriga Zero™</span> inclui:
+            <h3 className="font-serif text-3xl md:text-4xl font-extrabold text-brand-dark-green tracking-tight leading-tight">
+              Seu <span className="text-brand-pink font-black">Kit Oficial Barriga Zero™</span> inclui:
             </h3>
-            <p className="text-brand-cream/80 text-xs md:text-sm max-w-xl mx-auto font-medium">
+            <p className="text-gray-600 text-xs md:text-sm max-w-xl mx-auto font-medium">
               Todo o método compilado em um ecossistema integrado para que você não precise pensar, apenas executar.
             </p>
           </div>
 
           {/* Value Perception Table (Kit Oficial Barriga Zero™ Bundle) */}
-          <div className="bg-brand-dark-green/70 rounded-3xl p-6 md:p-8 border border-white/10 space-y-4">
-            <div className="max-w-xl mx-auto bg-brand-green/40 rounded-2xl p-5 text-xs md:text-sm space-y-4 border border-white/5 shadow-inner">
+          <div className="bg-white rounded-3xl p-6 md:p-8 border border-brand-green/10 shadow-2xl space-y-4">
+            <div className="max-w-xl mx-auto bg-[#f2f7f3] rounded-2xl p-5 text-xs md:text-sm space-y-4 border border-brand-green/10 shadow-inner">
               
               {/* Highlight Kit Package */}
-              <div className="border-b border-white/10 pb-4">
+              <div className="pb-2">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h5 className="font-extrabold text-brand-gold text-sm md:text-base uppercase flex items-center gap-1.5">
+                    <h5 className="font-extrabold text-brand-pink text-sm md:text-base uppercase flex items-center gap-1.5">
                       <span>🎁</span> Kit Oficial Barriga Zero™
                     </h5>
-                    <ul className="text-[11px] text-brand-cream/85 list-disc list-inside space-y-1 mt-2 pl-2 font-medium">
+                    <ul className="text-[11px] text-gray-700 list-disc list-inside space-y-1 mt-2 pl-2 font-medium">
                       <li>App Interativo completo</li>
                       <li>Kit Oficial para Impressão de alta qualidade</li>
                       <li>Mapa Visual Prático dos 15 Dias</li>
@@ -991,32 +988,14 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
                       <li>Ferramentas interativas de acompanhamento</li>
                     </ul>
                   </div>
-                  <span className="text-brand-cream/60 line-through font-bold text-xs md:text-sm">R$ 197,00</span>
+                  <span className="text-gray-400 line-through font-bold text-xs md:text-sm">R$ 197,00</span>
                 </div>
-              </div>
-
-              {/* Bonus 1 */}
-              <div className="flex justify-between items-center py-2 border-b border-white/10 text-xs md:text-sm">
-                <div>
-                  <span className="font-bold text-white flex items-center gap-1.5">🍹 Guia de Sucos Detox</span>
-                  <p className="text-[10px] text-brand-cream/70 font-medium pl-5">Combinações perfeitas de queima e limpeza</p>
-                </div>
-                <span className="text-brand-cream/60 line-through font-bold">R$ 47,00</span>
-              </div>
-
-              {/* Bonus 2 */}
-              <div className="flex justify-between items-center py-2 border-b border-white/10 text-xs md:text-sm">
-                <div>
-                  <span className="font-bold text-white flex items-center gap-1.5">🥣 Guia de Sopas Funcionais</span>
-                  <p className="text-[10px] text-brand-cream/70 font-medium pl-5">Opções leves e nutritivas para seu jantar</p>
-                </div>
-                <span className="text-brand-cream/60 line-through font-bold">R$ 47,00</span>
               </div>
 
               {/* Total Accumulated Value */}
-              <div className="flex justify-between items-center pt-2 font-black text-brand-gold text-xs md:text-sm uppercase tracking-wider">
-                <span>VALOR TOTAL ACUMULADO:</span>
-                <span className="line-through text-red-400">R$ 291,00</span>
+              <div className="flex justify-between items-center pt-2 font-black text-brand-green text-xs md:text-sm uppercase tracking-wider border-t border-brand-green/10">
+                <span>VALOR DO KIT COMPLETO:</span>
+                <span className="line-through text-red-500">R$ 197,00</span>
               </div>
             </div>
           </div>
@@ -1024,8 +1003,8 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
           {/* Proposal, Price & Core Checkout Card */}
           <div className="text-center space-y-6">
             <div className="space-y-2">
-              <h4 className="font-serif text-2xl md:text-3xl font-bold text-brand-gold">A proposta é simples e clara...</h4>
-              <p className="text-sm md:text-base max-w-xl mx-auto leading-relaxed text-brand-cream/90 font-medium">
+              <h4 className="font-serif text-2xl md:text-3xl font-bold text-brand-pink">A proposta é simples e clara...</h4>
+              <p className="text-sm md:text-base max-w-xl mx-auto leading-relaxed text-gray-700 font-medium">
                 Sua chance de eliminar até 3 cm de abdômen em 15 dias. Um passo a passo prático que você pode usar com acesso vitalício, sem mensalidades nem pegadinhas!
               </p>
             </div>
@@ -1042,7 +1021,7 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
               
               <div className="text-center space-y-1 pt-2">
                 <h4 className="text-lg font-black text-brand-green uppercase tracking-wide">KIT OFICIAL BARRIGA ZERO™</h4>
-                <p className="text-xs text-gray-400 line-through font-bold">De R$ 291,00 por apenas</p>
+                <p className="text-xs text-gray-400 line-through font-bold">De R$ 197,00 por apenas</p>
                 <p className="font-serif text-5xl font-black text-brand-pink">R$ 27,00</p>
                 <p className="text-[10px] text-gray-500 font-extrabold mt-1">Pagamento único • Sem tarifas ocultas</p>
               </div>
@@ -1081,14 +1060,6 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
                     <span className="text-brand-green font-black">✔</span>
                     <span>Cartão Antissabotagem</span>
                   </li>
-                  <li className="flex items-center gap-2 text-brand-pink">
-                    <span className="text-brand-pink font-black">✔</span>
-                    <span>Guia de Sucos Detox</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-brand-pink">
-                    <span className="text-brand-pink font-black">✔</span>
-                    <span>Guia de Sopas Funcionais</span>
-                  </li>
                 </ul>
               </div>
 
@@ -1115,29 +1086,29 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
         </section>
 
         {/* Nutri Intro */}
-        <section className="bg-brand-dark-green rounded-3xl p-6 md:p-8 space-y-6">
+        <section className="bg-white text-gray-900 rounded-3xl p-6 md:p-8 space-y-6 border border-brand-green/10 shadow-xl">
           <div className="text-center space-y-1">
-            <span className="text-xs tracking-wider uppercase text-brand-gold font-bold">Conheça sua nutri</span>
-            <h3 className="font-serif text-2xl md:text-3xl font-bold">Nutricionista Andréia Vaz</h3>
+            <span className="text-xs tracking-wider uppercase text-brand-green font-extrabold">Conheça sua nutri</span>
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-brand-dark-green">Nutricionista Andréia Vaz</h3>
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 max-w-2xl mx-auto">
             <img 
               src="https://andreiavaz846109688.wordpress.com/wp-content/uploads/2026/04/unnamed-9.jpg" 
               alt="Andréia Vaz" 
-              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-brand-gold shadow-lg"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-brand-pink/30 shadow-lg"
               referrerPolicy="no-referrer"
               id="img-nutri-portrait"
             />
-            <div className="space-y-4 text-center md:text-left text-sm text-brand-cream/90 leading-relaxed">
-              <p className="font-bold text-brand-gold text-base">Oi, eu sou Andréia Vaz</p>
+            <div className="space-y-4 text-center md:text-left text-sm text-gray-700 leading-relaxed">
+              <p className="font-bold text-brand-pink text-base">Oi, eu sou Andréia Vaz</p>
               <p>
                 Estou aqui para compartilhar minha jornada e experiência como nutricionista clínica e analista comportamental da obesidade.
               </p>
               <p>
                 Desde 2006, venho conduzindo atendimentos nutricionais e, ao longo desse tempo, ajudei milhares de pessoas a alcançarem seus objetivos de perda de peso de maneira descomplicada e sustentável.
               </p>
-              <p className="font-serif italic text-brand-gold">
+              <p className="font-serif italic text-brand-pink font-semibold">
                 "A nutrição não cura tudo, mas sem nutrição, não cura nada. Emagrecer não deve ser um castigo, e sim um caminho de liberdade e saúde."
               </p>
             </div>
@@ -1175,10 +1146,10 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
         </section>
 
         {/* Security / Quality Disclaimer */}
-        <footer className="text-center space-y-6 py-6 border-t border-white/10 text-xs text-brand-cream/60">
+        <footer className="text-center space-y-6 py-6 border-t border-brand-green/10 text-xs text-gray-500">
           <div className="flex justify-center gap-6 max-w-xs mx-auto">
-            <span className="flex items-center gap-1"><Lock className="w-3.5 h-3.5 text-brand-gold" /> Conexão Segura</span>
-            <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-brand-gold" /> Garantia 7 Dias</span>
+            <span className="flex items-center gap-1"><Lock className="w-3.5 h-3.5 text-brand-pink" /> Conexão Segura</span>
+            <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-brand-pink" /> Garantia 7 Dias</span>
           </div>
           <p className="leading-relaxed">
             © {new Date().getFullYear()} Desafio Barriga Zero - Nutricionista Andréia Vaz (CRN8 3188). Todos os direitos reservados.
