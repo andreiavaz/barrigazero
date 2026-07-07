@@ -73,10 +73,10 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
   return (
     <div className="min-h-screen bg-brand-green text-brand-cream font-sans selection:bg-brand-pink selection:text-white">
       {/* Top Scarcity Banner with Countdown */}
-      <div className="bg-brand-pink text-white py-2.5 px-4 text-center text-xs md:text-sm font-extrabold flex flex-wrap items-center justify-center gap-2 border-b border-white/20 sticky top-0 z-50 shadow-md">
-        <Clock className="w-4 h-4 shrink-0 animate-pulse text-brand-gold" />
+      <div className="bg-red-600 text-white py-2.5 px-4 text-center text-xs md:text-sm font-extrabold flex flex-wrap items-center justify-center gap-2 border-b border-white/20 sticky top-0 z-50 shadow-md">
+        <Clock className="w-4 h-4 shrink-0 animate-pulse text-white" />
         <span className="tracking-wide uppercase">
-          Oferta Especial Ativa - Acesso Vitalício por R$ 27 liberada por apenas <span className="bg-white text-brand-pink px-2.5 py-0.5 rounded-md font-mono text-xs md:text-sm inline-block shadow-inner ml-1">{formatTime(timeLeft)}</span>
+          Oferta liberada por apenas 15 minutos: <span className="bg-white text-red-600 px-2.5 py-0.5 rounded-md font-mono text-xs md:text-sm inline-block shadow-inner ml-1 font-black">{formatTime(timeLeft)}</span>
         </span>
       </div>
 
@@ -85,6 +85,14 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
         
         {/* Header Hero Section - Dobra 1 (Fundo Branco, Letras Pretas, Destaque em Rosa, Botão Verde) */}
         <header className="bg-white text-gray-900 rounded-3xl p-6 md:p-10 shadow-2xl border border-gray-100 space-y-8 text-center max-w-4xl mx-auto">
+          {/* Alerta de Urgência em Vermelho com escrita em Branco */}
+          <div className="bg-red-600 text-white font-extrabold text-sm md:text-base py-3.5 px-6 rounded-2xl flex items-center justify-center gap-3 shadow-md max-w-xl mx-auto animate-pulse">
+            <Clock className="w-5 h-5 shrink-0 text-white animate-spin" style={{ animationDuration: '10s' }} />
+            <span className="tracking-wide uppercase">
+              Oferta liberada por apenas 15 minutos: <span className="bg-white text-red-600 px-2.5 py-0.5 rounded-md font-mono text-xs md:text-sm inline-block shadow-inner ml-1.5 font-black">{formatTime(timeLeft)}</span>
+            </span>
+          </div>
+
           {/* Headline */}
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-3xl mx-auto">
             Elimine até <span className="text-brand-pink font-black relative inline-block">3 cm de barriga</span> em apenas <span className="text-brand-pink font-black relative inline-block">15 dias</span>.
@@ -287,21 +295,21 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
         </section>
 
         {/* Dobra 4 - System & Delivery (Tudo o que você precisa já está pronto) */}
-        <section className="bg-brand-dark-green text-white rounded-3xl p-6 md:p-12 shadow-2xl border border-white/10 relative overflow-hidden max-w-4xl mx-auto" id="system-ready-section">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl"></div>
-          <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-brand-pink/10 rounded-full blur-2xl"></div>
+        <section className="bg-[#f2f7f3] text-gray-900 rounded-3xl p-6 md:p-12 shadow-xl border border-brand-green/10 relative overflow-hidden max-w-4xl mx-auto" id="system-ready-section">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/5 rounded-full blur-2xl"></div>
+          <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-brand-green/5 rounded-full blur-2xl"></div>
 
           <div className="text-center space-y-3 relative z-10">
-            <span className="text-brand-gold font-extrabold uppercase tracking-widest text-xs md:text-sm">
+            <span className="text-brand-green font-extrabold uppercase tracking-widest text-xs md:text-sm">
               Sem complicação e direto ao ponto
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-extrabold tracking-tight leading-tight max-w-2xl mx-auto">
-              Tudo o que você precisa <span className="text-brand-gold font-black">já está pronto</span>.
+            <h2 className="font-serif text-3xl md:text-4xl font-extrabold tracking-tight leading-tight max-w-2xl mx-auto text-brand-dark-green">
+              Tudo o que você precisa <span className="text-brand-green font-black">já está pronto</span>.
             </h2>
-            <p className="text-brand-pink font-extrabold text-sm md:text-base uppercase tracking-wider">
+            <p className="text-brand-green font-extrabold text-sm md:text-base uppercase tracking-wider">
               Você não receberá apenas vídeos.
             </p>
-            <p className="text-brand-cream/90 text-sm md:text-base max-w-xl mx-auto font-medium">
+            <p className="text-gray-600 text-sm md:text-base max-w-xl mx-auto font-medium">
               Você receberá um sistema completo para acompanhar sua evolução durante os 15 dias.
             </p>
           </div>
@@ -309,11 +317,11 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
           {/* Kit + App Image Mockup */}
           <div className="relative z-10 my-8 max-w-2xl mx-auto flex justify-center">
             <div className="relative group w-full">
-              <div className="absolute inset-0 bg-brand-gold/15 rounded-2xl filter blur-xl group-hover:blur-2xl transition duration-300"></div>
+              <div className="absolute inset-0 bg-brand-green/5 rounded-2xl filter blur-xl group-hover:blur-2xl transition duration-300"></div>
               <img 
                 src="https://andreiavaz846109688.wordpress.com/wp-content/uploads/2026/07/8f490502-6887-410c-abfe-502e94ad7abc.png" 
                 alt="Mockup do Kit + App Desafio Barriga Zero" 
-                className="rounded-2xl shadow-2xl relative z-10 w-full h-auto object-cover border border-white/10 transition-transform duration-300 group-hover:scale-[1.01]"
+                className="rounded-2xl shadow-2xl relative z-10 w-full h-auto object-cover border border-brand-green/10 transition-transform duration-300 group-hover:scale-[1.01]"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -322,59 +330,67 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
           {/* Formats Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto relative z-10">
             {/* Format 1 - App */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 space-y-3 flex flex-col justify-start">
+            <div className="bg-white border border-brand-green/10 rounded-2xl p-6 space-y-3 flex flex-col justify-start shadow-md hover:shadow-lg transition-shadow duration-200">
               <div className="flex items-center gap-3">
                 <span className="text-2xl" role="img" aria-label="smartphone">📱</span>
-                <h4 className="font-bold text-lg text-brand-gold uppercase tracking-wide">Aplicativo Barriga Zero</h4>
+                <h4 className="font-bold text-lg text-brand-dark-green uppercase tracking-wide">Aplicativo Barriga Zero</h4>
               </div>
-              <p className="text-brand-cream/80 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed font-medium">
                 Abra o aplicativo e siga a missão do dia.
               </p>
             </div>
 
             {/* Format 2 - Print */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 space-y-3 flex flex-col justify-start">
+            <div className="bg-white border border-brand-green/10 rounded-2xl p-6 space-y-3 flex flex-col justify-start shadow-md hover:shadow-lg transition-shadow duration-200">
               <div className="flex items-center gap-3">
                 <span className="text-2xl" role="img" aria-label="book">📖</span>
-                <h4 className="font-bold text-lg text-brand-gold uppercase tracking-wide">Kit Oficial para Imprimir</h4>
+                <h4 className="font-bold text-lg text-brand-dark-green uppercase tracking-wide">Kit Oficial para Imprimir</h4>
               </div>
               <div className="space-y-1">
-                <p className="text-brand-pink font-extrabold text-xs uppercase tracking-wider">Prefere papel?</p>
-                <p className="text-brand-cream/80 text-sm leading-relaxed">
+                <p className="text-brand-green font-extrabold text-xs uppercase tracking-wider">Prefere papel?</p>
+                <p className="text-gray-600 text-sm leading-relaxed font-medium">
                   Baixe todos os materiais e acompanhe sua evolução à mão.
                 </p>
               </div>
             </div>
           </div>
-
-          {/* Final Format Statement */}
-          <div className="pt-6 text-center relative z-10">
-            <span className="inline-flex items-center gap-2 bg-brand-pink/25 border border-brand-pink/30 text-white font-extrabold text-sm md:text-base px-6 py-2.5 rounded-full shadow-lg">
-              ❤️ Você escolhe o formato. O plano é o mesmo.
-            </span>
-          </div>
         </section>
 
         {/* Pricing Offer 1 */}
-        <section className="text-center py-6 bg-white text-brand-dark-green rounded-3xl shadow-xl px-4 md:px-8 space-y-4 border-2 border-brand-gold">
+        <section className="text-center py-8 bg-white text-brand-dark-green rounded-3xl shadow-xl px-4 md:px-8 space-y-6 border-2 border-brand-gold max-w-xl mx-auto">
           <div className="text-brand-pink text-xs md:text-sm font-bold tracking-widest uppercase">
             ⚡ PREÇO DE LANÇAMENTO EXCLUSIVO ⚡
           </div>
           <div className="text-sm md:text-base text-gray-500 line-through font-medium">
             De R$ 97,00 por apenas
           </div>
-          <div className="font-serif text-4xl md:text-6xl font-extrabold text-brand-green">
+          <div className="font-serif text-5xl md:text-6xl font-black text-brand-pink">
             R$ 27,00
           </div>
           <div className="text-xs md:text-sm font-bold bg-brand-sage text-brand-green inline-block px-4 py-1.5 rounded-full">
             Estratégias VÁLIDAS PARA APLICAR NA SUA ROTINA
           </div>
+          
+          <div className="pt-2">
+            <a 
+              href="https://chk.eduzz.com/118019"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent('InitiateCheckout', { value: 27.00, currency: 'BRL', content_name: 'Desafio Barriga Zero' })}
+              className="w-full bg-brand-green hover:bg-brand-green/95 text-white font-black py-4 rounded-2xl shadow-xl transition-all duration-200 text-base md:text-lg hover:shadow-2xl flex items-center justify-center gap-2 uppercase tracking-wide"
+              id="btn-checkout-offer-1"
+            >
+              <ShieldCheck className="w-5 h-5 text-brand-gold shrink-0" />
+              Quero meu Acesso agora
+            </a>
+          </div>
+
           <div className="text-brand-pink font-bold text-xs tracking-wider uppercase mt-2">
             ⚠️ NÃO É FÓRMULA MÁGICA
           </div>
           
           {/* Guarantee bubble */}
-          <div className="bg-brand-sage/50 border border-brand-green/20 rounded-2xl p-4 max-w-md mx-auto text-xs md:text-sm text-brand-dark-green mt-4">
+          <div className="bg-brand-sage/50 border border-brand-green/20 rounded-2xl p-4 max-w-md mx-auto text-xs md:text-sm text-brand-dark-green mt-2">
             <span className="font-extrabold text-brand-pink block text-sm mb-1">🛡️ Satisfação Garantida</span>
             Se você aplicar as estratégias durante 7 dias e não funcionar... <strong>Devolvo todo seu DINHEIRO!</strong>
           </div>
@@ -386,43 +402,128 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
             O que as alunas estão dizendo...
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {TESTIMONIALS.slice(0, 2).map((testimonial) => (
-              <div key={testimonial.id} className="bg-white rounded-3xl p-5 shadow-lg border border-gray-100 flex flex-col justify-between text-brand-dark-green">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <img 
-                      src={testimonial.avatar} 
-                      alt={testimonial.name} 
-                      className="w-10 h-10 rounded-full object-cover border-2 border-brand-green"
-                    />
-                    <div>
-                      <h4 className="font-bold text-sm">{testimonial.name}</h4>
-                      <span className="text-xs bg-brand-pink/10 text-brand-pink font-semibold px-2 py-0.5 rounded-full">
-                        {testimonial.tag}
-                      </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+            {/* IMAGEM 1 */}
+            <div className="bg-white rounded-3xl p-5 shadow-lg border border-gray-100 flex flex-col justify-between text-brand-dark-green hover:shadow-xl transition-all duration-200">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-pink/15 flex items-center justify-center font-bold text-brand-pink text-sm">G</div>
+                  <div>
+                    <h4 className="font-bold text-sm text-brand-dark-green">Grupo do Desafio</h4>
+                    <span className="text-xs bg-brand-pink/10 text-brand-pink font-semibold px-2 py-0.5 rounded-full">
+                      Resultado do Desafio de 15 dias
+                    </span>
+                  </div>
+                </div>
+
+                {/* Real Screenshot with custom WhatsApp UI over top */}
+                <div className="relative rounded-2xl overflow-hidden border border-gray-200 bg-white group shadow-sm">
+                  <img 
+                    src="https://andreiavaz846109688.wordpress.com/wp-content/uploads/2026/07/imagem-do-whatsapp-de-2024-01-17-as-21.45.06_d370d5c2.jpg" 
+                    alt="Depoimento 1 no WhatsApp"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-auto object-cover"
+                  />
+                  
+                  {/* WhatsApp top bar cover to rename group and cover phone number */}
+                  <div className="absolute top-0 left-0 right-0 h-[10.5%] bg-[#075e54] flex items-center justify-between px-3 py-1.5 border-b border-white/5 shadow-md">
+                    <div className="flex items-center gap-1.5">
+                      {/* Back arrow */}
+                      <span className="text-white font-bold text-sm">←</span>
+                      {/* Group Icon / Avatar */}
+                      <div className="w-7 h-7 rounded-full bg-brand-pink/20 flex items-center justify-center font-bold text-white text-[11px] border border-white/20 shadow-inner">
+                        🎯
+                      </div>
+                      <div className="text-left">
+                        <p className="text-[10px] md:text-xs font-black text-white tracking-wide leading-tight">Desafio Barriga Zero 💚</p>
+                        <p className="text-[7.5px] md:text-[9px] text-emerald-100 font-medium">Você e +130 participantes</p>
+                      </div>
+                    </div>
+                    {/* Fake icons to look authentic */}
+                    <div className="flex items-center gap-3 text-white/90 text-xs pr-1">
+                      <span>📞</span>
+                      <span>⋮</span>
                     </div>
                   </div>
 
-                  {/* Mock WhatsApp screen */}
-                  <div className="bg-[#efeae2] rounded-2xl p-4 text-xs font-sans space-y-3 shadow-inner relative max-h-[190px] overflow-y-auto">
-                    {testimonial.screenshotText.messages.map((msg, idx) => (
-                      <div key={idx} className="bg-[#e2f9cb] p-2.5 rounded-xl max-w-[85%] ml-auto text-left relative shadow-sm border border-emerald-100/50">
-                        <p className="text-gray-800 leading-normal">{msg}</p>
-                        <span className="text-[9px] text-gray-500 block text-right mt-1">{testimonial.screenshotText.time}</span>
-                      </div>
-                    ))}
+                  {/* Elegant solid/blur stickers to hide individual cell phone numbers if any */}
+                  {/* We'll cover any phone number text beautifully on the left side of chat message bubbles */}
+                  <div className="absolute top-[16.5%] left-[11%] bg-white border border-gray-100 rounded-md px-1.5 py-0.5 shadow-sm text-[8px] font-black text-brand-pink uppercase tracking-wider flex items-center gap-1">
+                    <span>🌸</span> <span>Aluna Desafio</span>
+                  </div>
+                  <div className="absolute top-[37.5%] left-[11%] bg-white border border-gray-100 rounded-md px-1.5 py-0.5 shadow-sm text-[8px] font-black text-brand-pink uppercase tracking-wider flex items-center gap-1">
+                    <span>⭐</span> <span>Aluna Desafio</span>
+                  </div>
+
+                  {/* Visual Highlight Badge */}
+                  <div className="absolute bottom-3 right-3 bg-brand-pink text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow uppercase tracking-wider">
+                    Mensagem Real 📸
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-gray-100 mt-4 text-center">
+                <span className="text-xs text-brand-green font-bold flex items-center justify-center gap-1">
+                  <ThumbsUp className="w-3.5 h-3.5" />
+                  Caso Real Verificado
+                </span>
+              </div>
+            </div>
+
+            {/* IMAGEM 2 */}
+            <div className="bg-white rounded-3xl p-5 shadow-lg border border-gray-100 flex flex-col justify-between text-brand-dark-green hover:shadow-xl transition-all duration-200">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-green/15 flex items-center justify-center font-bold text-brand-green text-sm">A</div>
+                  <div>
+                    <h4 className="font-bold text-sm text-brand-dark-green">Conversa com Aluna</h4>
+                    <span className="text-xs bg-brand-pink/10 text-brand-pink font-semibold px-2 py-0.5 rounded-full">
+                      Resultado do Desafio de 15 dias
+                    </span>
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-gray-100 mt-4 text-center">
-                  <span className="text-xs text-brand-green font-bold flex items-center justify-center gap-1">
-                    <ThumbsUp className="w-3.5 h-3.5" />
-                    Caso Real Verificado
-                  </span>
+                {/* Real Screenshot with matching smartphone wrapper style */}
+                <div className="relative rounded-2xl overflow-hidden border border-gray-200 bg-white group shadow-sm">
+                  <img 
+                    src="https://andreiavaz846109688.wordpress.com/wp-content/uploads/2026/07/imagem-do-whatsapp-de-2023-12-20-as-07.14.11_3c5b6e8d.jpg" 
+                    alt="Depoimento 2 no WhatsApp"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-auto object-cover"
+                  />
+                  
+                  {/* WhatsApp top bar cover to make both testimonials perfectly symmetric */}
+                  <div className="absolute top-0 left-0 right-0 h-[10.5%] bg-[#075e54] flex items-center justify-between px-3 py-1.5 border-b border-white/5 shadow-md">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-white font-bold text-sm">←</span>
+                      <div className="w-7 h-7 rounded-full bg-brand-pink/20 flex items-center justify-center font-bold text-white text-[11px] border border-white/20 shadow-inner">
+                        👩
+                      </div>
+                      <div className="text-left">
+                        <p className="text-[10px] md:text-xs font-black text-white tracking-wide leading-tight">Aluna do Desafio 💚</p>
+                        <p className="text-[7.5px] md:text-[9px] text-emerald-100 font-medium">Online</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 text-white/90 text-xs pr-1">
+                      <span>📞</span>
+                      <span>⋮</span>
+                    </div>
+                  </div>
+
+                  {/* Visual Highlight Badge */}
+                  <div className="absolute bottom-3 right-3 bg-brand-pink text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow uppercase tracking-wider">
+                    Mensagem Real 📸
+                  </div>
                 </div>
               </div>
-            ))}
+
+              <div className="pt-3 border-t border-gray-100 mt-4 text-center">
+                <span className="text-xs text-brand-green font-bold flex items-center justify-center gap-1">
+                  <ThumbsUp className="w-3.5 h-3.5" />
+                  Caso Real Verificado
+                </span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -615,18 +716,18 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
         </section>
 
         {/* Dobra 5.5 - Process Timeline (Você não precisa decorar nada) */}
-        <section className="bg-brand-dark-green text-white rounded-3xl p-6 md:p-10 shadow-2xl border border-white/10 relative overflow-hidden max-w-4xl mx-auto animate-fade-in" id="timeline-process-section">
+        <section className="bg-white text-gray-900 rounded-3xl p-6 md:p-10 shadow-2xl border border-gray-100 relative overflow-hidden max-w-4xl mx-auto animate-fade-in" id="timeline-process-section">
           <div className="absolute top-0 left-0 w-32 h-32 bg-brand-pink/5 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-0 right-0 w-32 h-32 bg-brand-gold/5 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-brand-green/5 rounded-full blur-2xl"></div>
           
           <div className="text-center space-y-3 relative z-10">
-            <span className="text-brand-gold font-extrabold uppercase tracking-widest text-xs md:text-sm">
+            <span className="text-brand-green font-extrabold uppercase tracking-widest text-xs md:text-sm">
               Tranquilidade e Simplicidade
             </span>
-            <h3 className="font-serif text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
+            <h3 className="font-serif text-3xl md:text-4xl font-extrabold tracking-tight leading-tight text-brand-dark-green">
               Você <span className="text-brand-pink font-black">não precisa decorar</span> nada.
             </h3>
-            <p className="text-brand-cream/90 text-sm md:text-base font-medium max-w-xl mx-auto">
+            <p className="text-gray-600 text-sm md:text-base font-medium max-w-xl mx-auto">
               Durante os próximos 15 dias, basta repetir este processo simples. Sem esforço mental.
             </p>
           </div>
@@ -636,70 +737,70 @@ export default function SalesLandingPage({ onStartCheckout, onPreviewApp, mockup
             <div className="flex flex-col items-center space-y-3 md:space-y-0 md:flex-row md:justify-between md:items-stretch gap-1">
               
               {/* Step 1 */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105">
+              <div className="bg-[#f2f7f3] border border-brand-green/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105 shadow-sm">
                 <span className="text-3xl" role="img" aria-label="smartphone">📱</span>
-                <span className="text-[10px] font-black uppercase tracking-wider text-brand-gold">Passo 1</span>
-                <p className="text-xs font-extrabold leading-tight text-white">Abra o aplicativo</p>
+                <span className="text-[10px] font-black uppercase tracking-wider text-brand-pink">Passo 1</span>
+                <p className="text-xs font-extrabold leading-tight text-brand-dark-green">Abra o aplicativo</p>
               </div>
 
               {/* Arrow */}
-              <div className="flex items-center justify-center text-brand-pink font-black md:rotate-0 rotate-90 text-xl shrink-0 py-1">
-                <span className="hidden md:inline">↓</span>
+              <div className="flex items-center justify-center text-brand-pink font-black text-xl shrink-0 py-1">
+                <span className="hidden md:inline">→</span>
                 <span className="inline md:hidden">↓</span>
               </div>
 
               {/* Step 2 */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105">
+              <div className="bg-[#f2f7f3] border border-brand-green/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105 shadow-sm">
                 <span className="text-3xl" role="img" aria-label="target">🎯</span>
-                <span className="text-[10px] font-black uppercase tracking-wider text-brand-gold">Passo 2</span>
-                <p className="text-xs font-extrabold leading-tight text-white">Faça a missão</p>
+                <span className="text-[10px] font-black uppercase tracking-wider text-brand-pink">Passo 2</span>
+                <p className="text-xs font-extrabold leading-tight text-brand-dark-green">Faça a missão</p>
               </div>
 
               {/* Arrow */}
-              <div className="flex items-center justify-center text-brand-pink font-black md:rotate-0 rotate-90 text-xl shrink-0 py-1">
-                <span className="hidden md:inline">↓</span>
+              <div className="flex items-center justify-center text-brand-pink font-black text-xl shrink-0 py-1">
+                <span className="hidden md:inline">→</span>
                 <span className="inline md:hidden">↓</span>
               </div>
 
               {/* Step 3 */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105">
+              <div className="bg-[#f2f7f3] border border-brand-green/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105 shadow-sm">
                 <span className="text-3xl" role="img" aria-label="check-mark">✅</span>
-                <span className="text-[10px] font-black uppercase tracking-wider text-brand-gold">Passo 3</span>
-                <p className="text-xs font-extrabold leading-tight text-white">Marque o check</p>
+                <span className="text-[10px] font-black uppercase tracking-wider text-brand-pink">Passo 3</span>
+                <p className="text-xs font-extrabold leading-tight text-brand-dark-green">Marque o check</p>
               </div>
 
               {/* Arrow */}
-              <div className="flex items-center justify-center text-brand-pink font-black md:rotate-0 rotate-90 text-xl shrink-0 py-1">
-                <span className="hidden md:inline">↓</span>
+              <div className="flex items-center justify-center text-brand-pink font-black text-xl shrink-0 py-1">
+                <span className="hidden md:inline">→</span>
                 <span className="inline md:hidden">↓</span>
               </div>
 
               {/* Step 4 */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105">
+              <div className="bg-[#f2f7f3] border border-brand-green/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105 shadow-sm">
                 <span className="text-3xl" role="img" aria-label="relieved-face">😌</span>
-                <span className="text-[10px] font-black uppercase tracking-wider text-brand-gold">Passo 4</span>
-                <p className="text-xs font-extrabold leading-tight text-white">Continue seu dia</p>
+                <span className="text-[10px] font-black uppercase tracking-wider text-brand-pink">Passo 4</span>
+                <p className="text-xs font-extrabold leading-tight text-brand-dark-green">Continue seu dia</p>
               </div>
 
               {/* Arrow */}
-              <div className="flex items-center justify-center text-brand-pink font-black md:rotate-0 rotate-90 text-xl shrink-0 py-1">
-                <span className="hidden md:inline">↓</span>
+              <div className="flex items-center justify-center text-brand-pink font-black text-xl shrink-0 py-1">
+                <span className="hidden md:inline">→</span>
                 <span className="inline md:hidden">↓</span>
               </div>
 
               {/* Step 5 */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105">
+              <div className="bg-[#f2f7f3] border border-brand-green/10 rounded-2xl p-4 text-center space-y-2 flex-1 flex flex-col items-center justify-center min-w-[125px] transition-all hover:scale-105 shadow-sm">
                 <span className="text-3xl" role="img" aria-label="celebration">🎉</span>
-                <span className="text-[10px] font-black uppercase tracking-wider text-brand-gold">Passo 5</span>
-                <p className="text-xs font-extrabold leading-tight text-white">Veja sua evolução</p>
+                <span className="text-[10px] font-black uppercase tracking-wider text-brand-pink">Passo 5</span>
+                <p className="text-xs font-extrabold leading-tight text-brand-dark-green">Veja sua evolução</p>
               </div>
 
             </div>
           </div>
 
           <div className="text-center pt-6 relative z-10 max-w-md mx-auto">
-            <p className="text-xs text-brand-cream/80 leading-relaxed font-medium">
-              Esta estrutura de checklist de passos simples elimina o peso mental. Você não está apenas adquirindo informações soltas, você está conquistando <strong className="text-brand-gold uppercase tracking-wider font-extrabold">tranquilidade</strong>.
+            <p className="text-xs text-gray-600 leading-relaxed font-medium">
+              Esta estrutura de checklist de passos simples elimina o peso mental. Você não está apenas adquirindo informações soltas, você está conquistando <strong className="text-brand-green uppercase tracking-wider font-extrabold">tranquilidade</strong>.
             </p>
           </div>
         </section>
